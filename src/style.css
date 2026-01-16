@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'EcritureA';
-  src: url('/EcritureA-Romain.otf') format('opentype');
+  src: url('./assets/EcritureA-Romain.otf') format('opentype');
 }
 
 :root {
