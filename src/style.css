@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'EcritureA';
+  src: url('/EcritureA-Romain.otf') format('opentype');
+}
+
+:root {
+  --primary-color: #2c3e50;
+  --error-color: #e74c3c;
+  --paper-color: #fff;
+  --highlight: #a8d1ff;
+  --font-main: 'EcritureA', cursive;
+
+  /* Seyes Dimensions */
+  --line-height: 100px;
+  /* Big lines for kids */
+  --interline: 25px;
+  /* 4 spaces per main line (0, 25, 50, 75, 100) */
+
+  /* Seyes Colors */
+  --color-base: #a569bd;
+  /* Purple main line */
+  --color-inter: #aed6f1;
+  /* Light blue interlines */
+  --color-margin: #e74c3c;
+  /* Red margin */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background-color: #e0e5ecc4;
+  color: var(--primary-color);
+  overflow: hidden;
+  user-select: none;
+  /* Prevent selection */
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  font-family: sans-serif;
+  /* Buttons easier to read in sans */
+  border: none;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  /* Pill shape */
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  color: #333;
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button.locked {
+  background: #ffcccc;
+  color: #cc0000;
+}
