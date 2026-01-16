@@ -272,11 +272,27 @@ const ensureFocus = () => {
 }
 
 .controls {
-    margin-top: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
     display: flex;
+    flex-direction: column;
     gap: 15px;
-    z-index: 10;
-    align-items: center;
+    z-index: 100;
+    align-items: flex-end; /* Align to right */
+}
+
+/* Adjust for very small screens if needed */
+@media (max-width: 600px) {
+    .controls {
+        top: 10px;
+        right: 10px;
+        gap: 10px;
+    }
+    .controls button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
 }
 
 .hidden-input {
